@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
+
 type ListProps = {
   items: string[];
-  onClickItem: (item: string) => void;
 };
 
-export const List = ({ items, onClickItem }: ListProps) => (
+export const List = ({ items }: ListProps) => (
   <ul>
     {items.map((p) => (
       <li className="text" key={p}>
-        <div onClick={() => onClickItem(p)}>{p}</div>
+        <Link to={`/medicine/${p}`} className=" h-10 grid place-items-center">
+          {p}
+        </Link>
       </li>
     ))}
   </ul>

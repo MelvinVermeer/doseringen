@@ -5,7 +5,7 @@ type DetailProps = {
 
 export const Detail = ({ content, name }: DetailProps) => (
   <>
-    <div>{name}</div>
-    <div className="text-xs">{content}</div>
+    <h1 className="text-xl mb-4">{name}</h1>
+    <div>{content}</div>
   </>
 );
