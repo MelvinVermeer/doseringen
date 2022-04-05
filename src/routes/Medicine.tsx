@@ -1,29 +1,11 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import raw from "../data/data.json";
 import { Detail } from "../Detail";
+import raw from "../data/generated.json";
 
 export const Medicine = () => {
   const { name } = useParams();
   const data = raw as Record<string, any>;
+  const { content } = data.find((x: any) => x.url === name);
 
-  const file_name = "ace.md";
-  const [post, setPost] = useState("");
-
-  useEffect(() => {
-    import(`../data/${name}.md`)
-      .then((res) => {
-        fetch(res.default)
-          .then((res) => res.text())
-          .then((res) => setPost(res))
-          .catch((err) => console.log(err));
-      })
-      .catch((err) => console.log(err));
-  });
-
-  if (post === "") {
-    return <div>loading...</div>;
-  }
-
-  return <Detail content={post} name={name!} />;
+  return <Detail content={content} name={name!} />;
 };
