@@ -21,8 +21,6 @@ function App() {
     );
 
     const foundByContent = data.filter((p: any) => p.content.includes(q));
-    console.log(foundByTitle);
-    console.log(foundByContent);
 
     setFiltered(foundByTitle);
     setFiltered2(
