@@ -1,11 +1,11 @@
 import { ChangeEvent, useState } from "react";
 import "./App.css";
-import raw from "./data/sample.json";
+import raw from "./data/data.json";
 import { NoResults } from "./NoResults";
 import { List } from "./List";
 
 function App() {
-  const data = raw as Record<string, string>;
+  const data = raw as Record<string, any>;
   const products = Object.keys(data);
 
   const [query, setQuery] = useState("");
