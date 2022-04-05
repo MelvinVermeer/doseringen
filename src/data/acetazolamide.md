@@ -1,6 +1,6 @@
 # Acetazolamide
 
-Bij acuut glaucoom. 5-10mg/kg/per 24 uur, verdeeld over 4dd. Kunnen flinke bijwerkingen zijn:
+PO. Bij acuut glaucoom. 5-10mg/kg/per 24 uur, verdeeld over 4dd. Kunnen flinke bijwerkingen zijn:
 
 - sufheid
 - braken
