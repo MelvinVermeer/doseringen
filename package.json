@@ -24,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "create-json": "node scripts/create-json"
+    "create-json": "node scripts/create-json",
+    "prebuild": "npm run create-json"
   },
   "eslintConfig": {
     "extends": [
