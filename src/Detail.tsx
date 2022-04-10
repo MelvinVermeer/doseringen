@@ -6,5 +6,5 @@ type DetailProps = {
 };
 
 export const Detail = ({ content, name }: DetailProps) => (
-  <ReactMarkdown className="prose">{content}</ReactMarkdown>
+  <ReactMarkdown className="mt-2 mx-4 prose">{content}</ReactMarkdown>
 );

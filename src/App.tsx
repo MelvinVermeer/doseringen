@@ -30,23 +30,24 @@ function App() {
 
   return (
     <div>
-      <input
-        className="shadow appearance-none border rounded w-3/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        type="text"
-        placeholder="zoek"
-        value={query}
-        onChange={change}
-      />
-
-      <button
-        className="bg-purple-600 ml-2 w-1/5 rounded p-2 text-white"
-        onClick={() => {
-          setQuery("");
-          setFiltered(data);
-        }}
-      >
-        clear
-      </button>
+      <div className="sticky top-0 bg-white">
+        <input
+          className="shadow appearance-none border rounded w-3/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="zoek"
+          value={query}
+          onChange={change}
+        />
+        <button
+          className="bg-purple-600 ml-2 w-1/5 rounded p-2 text-white"
+          onClick={() => {
+            setQuery("");
+            setFiltered(data);
+          }}
+        >
+          clear
+        </button>
+      </div>
 
       {filtered.length + filtered2.length === 0 && <NoResults />}
       {filtered.length > 0 && <List items={filtered} />}
