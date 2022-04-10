@@ -50,7 +50,18 @@ function App() {
       </div>
 
       {filtered.length + filtered2.length === 0 && <NoResults />}
-      {filtered.length > 0 && <List items={filtered} />}
+      {filtered.length > 0 && (
+        <List
+          items={[
+            ...filtered.filter((x) =>
+              x.title.toLowerCase().startsWith(query.toLowerCase())
+            ),
+            ...filtered.filter(
+              (x) => !x.title.toLowerCase().startsWith(query.toLowerCase())
+            ),
+          ]}
+        />
+      )}
 
       {filtered2.length > 0 && (
         <>
